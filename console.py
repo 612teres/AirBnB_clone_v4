@@ -11,7 +11,7 @@ from models.place import Place
 from models.review import Review
 from models.state import State
 from models.user import User
-import shlex  # for splitting the line along spaces except in double quotes
+import shlex
 
 classes = {"Amenity": Amenity, "BaseModel": BaseModel, "City": City,
            "Place": Place, "Review": Review, "State": State, "User": User}
@@ -83,9 +83,9 @@ class HBNBCommand(cmd.Cmd):
                 else:
                     print("** no instance found **")
             else:
-                print("** instance id missing **")
+                print("** The instance id missing **")
         else:
-            print("** class doesn't exist **")
+            print("** The class doesn't exist **")
 
     def do_destroy(self, arg):
         """Deletes an instance based on the class and id"""
@@ -101,9 +101,9 @@ class HBNBCommand(cmd.Cmd):
                 else:
                     print("** no instance found **")
             else:
-                print("** instance id missing **")
+                print("** The instance id missing **")
         else:
-            print("** class doesn't exist **")
+            print("** The class doesn't exist **")
 
     def do_all(self, arg):
         """Prints string representations of instances"""
